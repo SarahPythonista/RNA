@@ -1,29 +1,31 @@
 def motzkinlengthk(length, width, memoize={0: 1}):
     """
     This program computes the number
-    of possible Motzkin paths of a specified 
-    length and minimum width.
+    of possible Motzkin paths of length ''length''
+    and minimum width ''width''.
 
-    Motzkin paths can be expressed as a function
-    of the Catalan numbers. Catalan numbers are
-    represented by sets of parenthesis.
-    There are two rules for Catalan numbers:
+    A Motzkin path can be described best using
+    Catalan numbers, so let's first define those.
+    
+    One way of representing the Catalan numbers
+    is via parenthesis. These parenthesis obey
+    the standard rules parenthesis would obey
+    in standard mathematics or written language:
 
     1) At any point in the sequence, there
     must be at least as many open parenthesis
     as closed parenthesis
 
-    2) At the end of the sequence, all
-    parentheses have been closed (that is,
+    2) At the end of the sequence, all sets 
+    of parentheses must be closed (that is,
     there are an equal number of open and
     closed parenthesis).
 
-    This essentialy is the same as the rules for
-    using parenthesis in mathematics:
+    In other words:
 
-    All parentheses must be paired, and we
-    can't have a closed parenthesis that aren't
-    preceeded by an open one.
+    All parentheses must be paired. We
+    can't have a closed parenthesis  that
+    isn't preceeded by an open one.
 
     A Motzkin path is like a Catalan number,
     exept that it contains both parenthesis
